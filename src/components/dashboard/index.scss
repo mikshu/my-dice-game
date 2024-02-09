@@ -1,0 +1,167 @@
+$dice-blue: #2d2ae7; // New soothing blue color
+$dice-red: #F63738;
+$dice-grey: rgb(84, 84, 102);
+$dice-black-transparent: #05050545;
+$dice-black: #000;
+$dice-light-grey: #f4f4f5;
+$dice-brown: brown;
+
+.dice-game-container {
+  background-color: $dice-light-grey;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  h1 {
+    text-align: center;
+    color: $dice-brown;
+  }
+
+  .game-panel {
+    border: 5px solid $dice-grey;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+    padding: 25px;
+    position: relative;
+
+    .game-panel-score {
+      height: 80px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+
+      .balanceDetails {
+        display: block;
+        border: 2px solid $dice-black-transparent;
+        border-radius: 5px;
+
+        .balance-label {
+          font-size: 12px;
+          text-align: center;
+          font-weight: bold;
+          border-radius: 5px;
+          padding: 5px 10px;
+
+          .balance-label-value {
+            display: inline-block;
+            text-align: center;
+            margin-left: 5px;
+          }
+        }
+
+        .balance-win-amount {
+          text-align: center;
+          padding: 5px 10px;
+          font-size: 16px;
+          font-weight: 500;
+
+          .balance-win-icon {
+            color: $dice-black;
+            font-size: 20px;
+            margin-left: 3px;
+          }
+        }
+      }
+
+      .last {
+        margin: 0 0 0 auto;
+        display: block;
+        font-weight: bold;
+        border: 2px solid $dice-black-transparent;
+        border-radius: 5px;
+
+        .last-label {
+          font-size: 12px;
+          text-align: center;
+          border-radius: 5px;
+          padding: 5px 10px;
+
+          .last-label-value {
+            display: inline-block;
+            margin-left: 5px;
+            text-align: center;
+          }
+        }
+
+        .last-score {
+          text-align: center;
+          padding: 5px 10px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .dice-board-block {
+      width: 100%;
+      display: flex;
+
+      .play-board {
+        height: auto;
+        width: 20%;
+        margin: 20px auto;
+        padding: 10px;
+        border: 2px solid $dice-black;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .reset-header {
+          color: $dice-red;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .game-caution {
+          color: $dice-blue; // Updated soothing blue color
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .reset-game, .start-game {
+          background-color: $dice-blue; // Updated soothing blue color
+          color: white;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 0;
+          padding: 5px 10px;
+          cursor: pointer;
+
+          &.reset-game {
+            background-color: $dice-red;
+          }
+        }
+      }
+
+      .dice-board {
+        width: 70%;
+        margin: 1rem;
+        border-radius: 10px;
+        border: 2px solid $dice-black;
+
+        .dice-row, .bet-row {
+          border-radius: 12px;
+          padding: 0.5rem;
+          display: flex;
+          justify-content: space-evenly;
+
+          &.dice-row {
+            padding-bottom: 0;
+          }
+
+          .bet-text {
+            text-align: center;
+            margin: 0.5rem;
+            color: $dice-blue; // Updated soothing blue color
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
